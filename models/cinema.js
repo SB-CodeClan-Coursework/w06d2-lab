@@ -9,10 +9,26 @@ Cinema.prototype.getFilmTitles = function () {
   return result;
 };
 
-Cinema.prototype.filmByTitle = function () {
+Cinema.prototype.filmsByTitle = function (title) {
   const result = this.films.filter((film) => {
-    return film.title === "T2 Trainspotting";
+    return film.title === title;
   });
   return result;
 };
+
+Cinema.prototype.filmsByGenre = function (genre) {
+  const result = this.films.filter((film) => {
+    return film.genre === genre;
+  })
+  return result;
+};
+
+
+
+
+
+
+
+
+
 module.exports = Cinema;
